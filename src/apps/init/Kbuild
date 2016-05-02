@@ -10,4 +10,6 @@
 
 apps-$(CONFIG_APP_INIT)  += init
 
-init: common libsel4 libplayground 
+init-y: common libsel4 libplayground 
+
+init: kernel_elf $(init-y)
