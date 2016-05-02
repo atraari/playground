@@ -19,11 +19,6 @@ playground_stub()
 	dprintf("\t -> playground stub invoked...\n");
 }
 
-long sys_restart_syscall(va_list ap){
-	assert(!"sys_restart_syscall not implemented");
-	return 0;
-}
-
 #ifdef ARCH_IA32
 
 long sys_restart_syscall(va_list ap) {
