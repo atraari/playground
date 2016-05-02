@@ -12,11 +12,11 @@
 
 # This file defines the Kconfig menu structure.
 
-mainmenu "Project Configuration"
+# mainmenu "Project Configuration"
 
-menu "seL4 Kernel"
-source "kernel/Kconfig"
-endmenu
+# menu "seL4 Kernel"
+# source "kernel/Kconfig"
+# endmenu
 
 config COMMON_PATH
     string
