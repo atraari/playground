@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#!/bin/bash
+
+DIRECTORY=/playground/img-root/
+OUTPUT=/playground/images/playground-image.iso
+
+while [[ $# > 1 ]]
+do
+key="$1"
+
+case $key in
+    -d|--directory)
+    DIRECTORY="$2"
+    shift # past argument
+    ;;
+    -o)
+    OUTPUT="$2"
+    shift # past argument
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+shift # past argument or value
+done
+
+echo "Creating the ISO image..."
+mkisofs     -f -l -R -hide-rr-moved -jcharset utf-8 \
+                            -no-emul-boot -boot-load-size 4 -boot-info-table \
+                            -b boot/isolinux/isolinux.bin \
+                            -o $OUTPUT $DIRECTORY

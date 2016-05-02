@@ -1,0 +1,7 @@
+timeout 10
+default 0
+
+title playgroundOS (based on seL4)
+	kernel /boot/kernel.elf
+	module /sbin/init
+

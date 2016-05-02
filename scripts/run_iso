@@ -1,0 +1,22 @@
+#!/bin/bash
+
+ISO=/playground/images/playground-image.iso
+
+while [[ $# > 1 ]]
+do
+key="$1"
+
+case $key in
+    -i|--iso)
+    ISO="$2"
+    shift # past argument
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+shift # past argument or value
+done
+
+echo "Running onics..."
+qemu-system-i386 -m 2048M -cdrom $ISO -boot d
