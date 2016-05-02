@@ -49,11 +49,11 @@ simulate-kzm:
 simulate-ia32:
 	qemu-system-i386 \
 		-m 512 -nographic \
-		-cdrom images/playground-image.img -boot d
+		-cdrom images/playground-image.iso -boot d
 
 simulate-ia32-graphics:
 	qemu-system-i386 \
-		-m 512 -cdrom images/playground-image.img -boot d
+		-m 512 -cdrom images/playground-image.iso -boot d
 
 # Help
 .PHONY: help
