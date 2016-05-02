@@ -21,6 +21,6 @@ NK_CFLAGS += -O2 -D_XOPEN_SOURCE=700
 LIBS := sel4 playground
 
 # Custom linker script
-# NK_LDFLAGS += -T $(SOURCE_DIR)/linker.lds
+NK_LDFLAGS += -T $(SOURCE_DIR)/linker.lds
 
 include $(SEL4_COMMON)/common.mk
