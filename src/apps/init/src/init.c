@@ -11,6 +11,9 @@
 #include <playground/stub.h>
 #include <playground/dprintf.h>
 
+const char* dprintfServerName = "INIT";
+int dprintfServerColour = 33;
+
 int main(void)
 {
     dprintf("Init started...\n");

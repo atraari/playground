@@ -93,6 +93,9 @@ static inline void seL4_DebugPrintf(char *fmt, ...) {
 #endif
 }
 
+extern const char* dprintfServerName;
+extern int dprintfServerColour;
+
 // Enable verbose debugging output.
 #ifdef CONFIG_PLAYGROUND_DEBUG_VERBOSE
     #define DLOG_VERBOSE 1
