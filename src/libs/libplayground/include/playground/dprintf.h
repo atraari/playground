@@ -97,21 +97,22 @@ extern const char* dprintfServerName;
 extern int dprintfServerColour;
 
 // Enable verbose debugging output.
-#ifdef CONFIG_PLAYGROUND_DEBUG_VERBOSE
+#ifdef CONFIG_REFOS_DEBUG_VERBOSE
     #define DLOG_VERBOSE 1
 #else 
     #define DLOG_VERBOSE 0
 #endif
 
-#define PLAYGRUND_ERROR(...) printf(COLOUR "ERROR" COLOUR_RESET " %s(): ", \
+#define ROS_ERROR(...) printf(COLOUR "ERROR" COLOUR_RESET " %s(): ", \
     31, __FUNCTION__); printf(__VA_ARGS__); printf("\n");
 
-#define PLAYGROUND_WARNING(...) printf(COLOUR "WARNING" COLOUR_RESET " %s(): ", \
+#define ROS_WARNING(...) printf(COLOUR "WARNING" COLOUR_RESET " %s(): ", \
     33, __FUNCTION__); printf(__VA_ARGS__); printf("\n");
 
-#ifdef CONFIG_PLAYGROUND_DEBUG
+#ifdef CONFIG_REFOS_DEBUG
     #define dprintf(...) printf("[00.%u] " COLOUR "%s | " \
         COLOUR_RESET " %s(): ", \
+        0, \
         dprintfServerColour, dprintfServerName, __FUNCTION__); \
         printf(__VA_ARGS__);
 #else
