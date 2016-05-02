@@ -17,6 +17,6 @@ CFILES += $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*/*.c))
 # Header files/directories this library provides
 HDRFILES := $(wildcard $(SOURCE_DIR)/include/*)
 
-CFLAGS := -O2 -D_XOPEN_SOURCE=700
+CFLAGS := -O2
 
 include $(SEL4_COMMON)/common.mk

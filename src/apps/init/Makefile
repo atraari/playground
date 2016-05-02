@@ -18,6 +18,6 @@ ASMFILES := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/crt/arch-${ARC
 NK_CFLAGS += -std=gnu99 -O2
 
 # Libraries required to build the target
-LIBS := sel4 playground
+LIBS := sel4 muslc playground
 
 include $(SEL4_COMMON)/common.mk

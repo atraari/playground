@@ -7,11 +7,14 @@
  *
  */
 
+#include <stdio.h>
 #include <playground/stub.h>
 
 int main(void)
 {
-    //printf("Init started and exiting...\n");
+    printf("Init started...\n");
+    playground_stub();
+    printf("Init exiting...\n");
     return 0;
 }
 

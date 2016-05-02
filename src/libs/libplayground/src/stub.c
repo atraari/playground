@@ -7,8 +7,10 @@
  *
  */
 
+#include <stdio.h>
+
 void
 playground_stub()
 {
-	// This is a stub.
+	printf("\t -> playground stub invoked...\n");
 }
