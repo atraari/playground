@@ -11,7 +11,7 @@
 config APP_INIT
     bool "playgroundOS Init"
     default y
-    depends on LIB_SEL4 && HAVE_LIBC && LIB_PLAYGROUND
+    depends on LIB_SEL4 && LIB_MUSL_C && LIB_PLAYGROUND
     select HAVE_SEL4_APPS
     help
         Simple init process.
