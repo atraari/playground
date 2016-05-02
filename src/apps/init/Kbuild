@@ -12,7 +12,7 @@ apps-$(CONFIG_APP_INIT)  	+= init
 
 init: 	common libsel4 libmuslc \
 		libsel4bench libsel4debug libsel4test libsel4utils \
-		libsel4allocman libsel4vka libsel4vmm libsel4vspace \
+		libsel4allocman libsel4vka libsel4vspace \
 		libsel4muslcsys libsel4platsupport libplayground \
 		libcpio libelf libutils \
 		libplatsupport libpci libethdrvers 
