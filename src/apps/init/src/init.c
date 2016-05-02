@@ -8,6 +8,9 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
 #include <playground/stub.h>
 #include <playground/dprintf.h>
 
@@ -16,6 +19,8 @@ int dprintfServerColour = 33;
 
 int main(void)
 {
+    SET_MUSLC_SYSCALL_TABLE;
+    
     dprintf("Init started...\n");
     playground_stub();
     dprintf("Init exiting...\n");
