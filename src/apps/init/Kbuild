@@ -8,6 +8,6 @@
 # @TAG(NICTA_BSD)
 #
 
-apps-$(CONFIG_APP_TERMINAL)  += terminal
+apps-$(CONFIG_APP_TERMINAL)  += init
 
 terminal: libmuslc libsel4 libplayground
