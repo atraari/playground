@@ -7,11 +7,10 @@
  *
  */
 
-#include <stdio.h>
-#include <autoconf.h>
+#include <playground.h>
 
 int main(void)
 {
-    printf("Init started and exiting...\n");
+    //printf("Init started and exiting...\n");
     return 0;
 }
