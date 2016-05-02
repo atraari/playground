@@ -14,4 +14,4 @@ config APP_INIT
     depends on depends on LIB_SEL4 && LIB_PLAYGROUND && LIB_SEL4_MUSLC_SYS
     select HAVE_SEL4_APPS
     help
-        Simple init process.
+        Simple init startup process.
