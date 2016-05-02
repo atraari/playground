@@ -23,8 +23,8 @@ int main(void)
 {
     SET_MUSLC_SYSCALL_TABLE;
     
-    dprintf("Init started...\n");
+    /*dprintf("Init started...\n");
     playground_stub();
-    dprintf("Init exiting...\n");
+    dprintf("Init exiting...\n");*/
     return 0;
 }
