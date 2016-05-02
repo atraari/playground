@@ -23,8 +23,7 @@ include tools/common/project.mk
 # playgroundOS ARM build command.
 ifeq (${CONFIG_ARCH_ARM},y)
 playground: export TOOLPREFIX=$(CONFIG_CROSS_COMPILER_PREFIX:"%"=%)
-playground: init \
-        common elfloader kernel_elf
+playground: common elfloader kernel_elf
 	@echo "Generating boot image: ${IMAGE_ROOT}/playground-image"
 	@${SEL4_COMMON}/elfloader/gen_boot_image.sh \
 		${STAGE_BASE}/kernel.elf \
@@ -35,8 +34,7 @@ endif
 # playgroundOS IA32 build command.
 ifeq (${CONFIG_ARCH_IA32},y)
 playground: export PATH := $(STAGE_ROOT)/dite:$(PATH)
-playground: init \
-		common app-images
+playground: common app-images
 	@echo "Generating boot image: ${IMAGE_ROOT}/playground-image.iso"
 	cp -f ${STAGE_BASE}/kernel.elf img-root/boot/kernel.elf
 	cp -f ${STAGE_BASE}/bin/init ./img-root/sbin/init
