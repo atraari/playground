@@ -12,8 +12,8 @@
 
 int main(void)
 {
-    printf("Init started...\n");
+    dprintf("Init started...\n");
     playground_stub();
-    printf("Init exiting...\n");
+    dprintf("Init exiting...\n");
     return 0;
 }

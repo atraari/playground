@@ -12,5 +12,5 @@
 void
 playground_stub()
 {
-	printf("\t -> playground stub invoked...\n");
+	dprintf("\t -> playground stub invoked...\n");
 }
