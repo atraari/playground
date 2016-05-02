@@ -8,6 +8,6 @@
 # @TAG(NICTA_BSD)
 #
 
-libs-$(CONFIG_LIB_DATA_STRUCT) += libplayground
+libs-$(CONFIG_LIB_PLAYGROUND) += libplayground
 
 libplayground: common
