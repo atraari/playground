@@ -10,7 +10,7 @@
 
 config LIB_PLAYGROUND
     bool "Build playgroundOS API library"
-    depends on LIB_SEL4 && HAVE_LIBC
+    depends on LIB_SEL4
     default y
     help
         playgroundOS API library.
