@@ -13,7 +13,10 @@ TARGETS := $(notdir $(SOURCE_DIR)).bin
 
 # Source files required to build the target
 CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
+
+ifneq (${CONFIG_HAVE_CRT},y)
 ASMFILES := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/crt/arch-${ARCH}/crt0.S))
+endif
 
 NK_CFLAGS += -std=gnu99 -O2
 
