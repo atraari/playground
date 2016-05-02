@@ -9,7 +9,7 @@
 #
 
 # Targets
-TARGETS := init
+TARGETS := $(notdir $(SOURCE_DIR)).bin
 
 # Source files required to build the target
 CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
