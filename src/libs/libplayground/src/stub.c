@@ -11,8 +11,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include <syscall_stubs_sel4.h>
-
 #include <playground/dprintf.h>
 
 void
