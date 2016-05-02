@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <autoconf.h>
 
 #include <syscall_stubs_sel4.h>
 

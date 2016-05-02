@@ -7,11 +7,14 @@
  *
  */
 
+#include <stdarg.h>
 #include <stdio.h>
-#include <syscall_stubs_sel4.h>
+#include <assert.h>
 
 #include <playground/stub.h>
 #include <playground/dprintf.h>
+
+#include <autoconf.h>
 
 const char* dprintfServerName = "INIT";
 int dprintfServerColour = 33;

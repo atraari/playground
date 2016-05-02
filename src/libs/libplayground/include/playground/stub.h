@@ -12,4 +12,6 @@
 
 void playground_stub();
 
+#include <syscall_stubs_sel4.h>
+
 #endif /* _PLAYGROUND_STUB_H_ */
