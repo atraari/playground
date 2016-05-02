@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <playground/stub.h>
+#include <playground/dprintf.h>
 
 int main(void)
 {

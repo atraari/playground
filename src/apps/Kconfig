@@ -17,3 +17,28 @@ menu "seL4 playgroundOS Applications"
 source "$SEL4_APPS_PATH/init/Kconfig"
 
 endmenu
+
+menu "seL4 playgroundOS Build Options"
+
+    config PLAYGROUND_DEBUG
+        bool "Enable playgroundOS debugging output."
+        default n
+        help
+            Enable debug printing in playgroundOS.
+
+    config PLAYGROUND_DEBUG_VERBOSE
+        bool "Enable playgroundOS extra verbose debugging output. "
+        default n
+        help
+            Enable extra verbose debug printing in playgroundOS.
+            Useful for debugging low level.
+            Beware of really long logs.
+            
+    config PLAYGROUND_ANSI_COLOUR_OUTPUT
+        bool "Enable ANSI escape sequenced colour output"
+        depends on LIB_PLAYGROUND
+        default y
+        help
+            Enable colour output using ANSI escape sequences. Disable if not outputting through serial
+            to an ANSI-enabled terminal.
+

@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <playground/dprintf.h>
 
 void
 playground_stub()
