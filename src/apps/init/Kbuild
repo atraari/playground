@@ -10,5 +10,7 @@
 
 apps-$(CONFIG_APP_INIT)  += init
 
-init: common libsel4 libmuslc \
-		libsel4muslcsys libplayground
+init: common libsel4 libmuslc libsel4allocman libsel4vka \
+		libsel4platsupport libsel4muslcsys libsel4utils \
+		libcpio libelf libplayground libdatastruct libsel4simple \
+		libsel4vspace libsel4utils libutils libsel4vspace
