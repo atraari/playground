@@ -9,7 +9,7 @@
 #
 
 # Targets
-TARGETS := init.bin
+TARGETS := $(notdir $(SOURCE_DIR)).bin
 
 # Source files required to build the target
 CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
@@ -21,6 +21,6 @@ NK_CFLAGS += -O2 -D_XOPEN_SOURCE=700
 LIBS := sel4 playground
 
 # Custom linker script
-NK_LDFLAGS += -T $(SOURCE_DIR)/linker.lds
+# NK_LDFLAGS += -T $(SOURCE_DIR)/linker.lds
 
 include $(SEL4_COMMON)/common.mk
