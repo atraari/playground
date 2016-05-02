@@ -17,7 +17,3 @@ int main(void)
     printf("Init exiting...\n");
     return 0;
 }
-
-void exit() {
-	for(;;);
-}
