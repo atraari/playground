@@ -32,7 +32,7 @@ _start:
     call main
 # the return value is in rax
     movq %rax, %rdi
-    call exit
+    //call exit
 
 1: jmp 1b
 
@@ -55,7 +55,7 @@ _start:
 
     /* Call exit with the return value from main. */
     pushl %eax
-    call exit
+    //call exit
 1: jmp 1b
 
 #endif
