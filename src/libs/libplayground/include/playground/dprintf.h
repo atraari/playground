@@ -109,7 +109,6 @@ static inline void seL4_DebugPrintf(char *fmt, ...) {
 #ifdef CONFIG_PLAYGROUND_DEBUG
     #define dprintf(...) printf("[00.%u] " COLOUR "%s | " \
         COLOUR_RESET " %s(): ", \
-        faketime ? faketime() : 0, \
         dprintfServerColour, dprintfServerName, __FUNCTION__); \
         printf(__VA_ARGS__);
 #else
