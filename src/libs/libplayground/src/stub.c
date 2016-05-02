@@ -1345,6 +1345,62 @@ long sys_fadvise(va_list ap) {
 	assert(!"sys_fadvise not implemented");
 	return 0;
 }
+long sys_read(va_list ap) {
+	assert(!"sys_read not implemented");
+	return 0;
+}
+long sys_write(va_list ap) {
+	assert(!"sys_write not implemented");
+	return 0;
+}
+long sys_open(va_list ap) {
+	assert(!"sys_open not implemented");
+	return 0;
+}
+long sys_close(va_list ap) {
+	assert(!"sys_close not implemented");
+	return 0;
+}
+long sys_lseek(va_list ap) {
+	assert(!"sys_lseek not implemented");
+	return 0;
+}
+long sys_getpid(va_list ap) {
+	assert(!"sys_getpid not implemented");
+	return 0;
+}
+long sys_umask(va_list ap) {
+	assert(!"sys_umask not implemented");
+	return 0;
+}
+long sys_munmap(va_list ap) {
+	assert(!"sys_munmap not implemented");
+	return 0;
+}
+long sys_sched_yield(va_list ap) {
+	assert(!"sys_sched_yield not implemented");
+	return 0;
+}
+long sys_nanosleep(va_list ap) {
+	assert(!"sys_nanosleep not implemented");
+	return 0;
+}
+long sys_rt_sigaction(va_list ap) {
+	assert(!"sys_rt_sigaction not implemented");
+	return 0;
+}
+long sys_fcntl64(va_list ap) {
+	assert(!"sys_fcntl64 not implemented");
+	return 0;
+}
+long sys_exit_group(va_list ap) {
+	assert(!"sys_exitgroup not implemented");
+	return 0;
+}
+long sys_clock_gettime(va_list ap) {
+	assert(!"sys_clock_gettime not implemented");
+	return 0;
+}
 
 #endif
 
@@ -2620,6 +2676,62 @@ long sys_process_vm_readv(va_list ap) {
 long sys_process_vm_writev(va_list ap) {
     assert(!"sys_process_vm_writev not implemented");
     return 0;
+}
+long sys_read(va_list ap) {
+	assert(!"sys_read not implemented");
+	return 0;
+}
+long sys_write(va_list ap) {
+	assert(!"sys_write not implemented");
+	return 0;
+}
+long sys_open(va_list ap) {
+	assert(!"sys_open not implemented");
+	return 0;
+}
+long sys_close(va_list ap) {
+	assert(!"sys_close not implemented");
+	return 0;
+}
+long sys_lseek(va_list ap) {
+	assert(!"sys_lseek not implemented");
+	return 0;
+}
+long sys_getpid(va_list ap) {
+	assert(!"sys_getpid not implemented");
+	return 0;
+}
+long sys_umask(va_list ap) {
+	assert(!"sys_umask not implemented");
+	return 0;
+}
+long sys_munmap(va_list ap) {
+	assert(!"sys_munmap not implemented");
+	return 0;
+}
+long sys_sched_yield(va_list ap) {
+	assert(!"sys_sched_yield not implemented");
+	return 0;
+}
+long sys_nanosleep(va_list ap) {
+	assert(!"sys_nanosleep not implemented");
+	return 0;
+}
+long sys_rt_sigaction(va_list ap) {
+	assert(!"sys_rt_sigaction not implemented");
+	return 0;
+}
+long sys_fcntl64(va_list ap) {
+	assert(!"sys_fcntl64 not implemented");
+	return 0;
+}
+long sys_exit_group(va_list ap) {
+	assert(!"sys_exitgroup not implemented");
+	return 0;
+}
+long sys_clock_gettime(va_list ap) {
+	assert(!"sys_clock_gettime not implemented");
+	return 0;
 }
 
 #endif
