@@ -13,7 +13,7 @@
 lib-dirs:=libs
 
 # The main target we want to generate
-all: playground
+all: libs muslc playground
 
 -include .config
 export CONFIG_ELF_LOADER_USE_SEL4C
@@ -23,7 +23,7 @@ include tools/common/project.mk
 # playgroundOS ARM build command.
 ifeq (${CONFIG_ARCH_ARM},y)
 playground: export TOOLPREFIX=$(CONFIG_CROSS_COMPILER_PREFIX:"%"=%)
-playground: common elfloader kernel_elf
+playground: libs common elfloader kernel_elf
 	@echo "Generating boot image: ${IMAGE_ROOT}/playground-image"
 	@${SEL4_COMMON}/elfloader/gen_boot_image.sh \
 		${STAGE_BASE}/kernel.elf \
@@ -34,12 +34,15 @@ endif
 # playgroundOS IA32 build command.
 ifeq (${CONFIG_ARCH_IA32},y)
 playground: export PATH := $(STAGE_ROOT)/dite:$(PATH)
-playground: common kernel_elf app-images
+playground: libs common kernel_elf app-images
 	@echo "Generating boot image: ${IMAGE_ROOT}/playground-image.iso"
 	cp -f ${STAGE_BASE}/kernel.elf img-root/boot/kernel.elf
 	cp -f ${STAGE_BASE}/bin/init ./img-root/sbin/init
 	./scripts/create_iso -d ./img-root/ -o ${IMAGE_ROOT}/playground-image.iso
 endif
+
+muslc: libmuslc
+	cp -f ${STAGE_BASE}/lib/libc.a ${STAGE_BASE}/lib/libmuslc.a
 
 # QEMU simulation helpers.
 simulate-kzm:
