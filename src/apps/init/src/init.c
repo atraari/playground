@@ -7,7 +7,7 @@
  *
  */
 
-#include <playground.h>
+#include <playground/playground.h>
 
 int main(void)
 {
