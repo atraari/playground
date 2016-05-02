@@ -7,8 +7,9 @@
  *
  */
 
+#include <stdarg.h>
 #include <stdio.h>
-#include <autoconf.h>
+#include <assert.h>
 
 #include <syscall_stubs_sel4.h>
 
