@@ -26,5 +26,6 @@ int main(void)
     /*dprintf("Init started...\n");
     playground_stub();
     dprintf("Init exiting...\n");*/
+    for(;;);
     return 0;
 }
