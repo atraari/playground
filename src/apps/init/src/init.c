@@ -8,8 +8,7 @@
  */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
+#include <syscall_stubs_sel4.h>
 
 #include <playground/stub.h>
 #include <playground/dprintf.h>
