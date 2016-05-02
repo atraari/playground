@@ -42,3 +42,4 @@ menu "seL4 playgroundOS Build Options"
             Enable colour output using ANSI escape sequences. Disable if not outputting through serial
             to an ANSI-enabled terminal.
 
+endmenu
