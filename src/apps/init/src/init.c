@@ -14,3 +14,7 @@ int main(void)
     //printf("Init started and exiting...\n");
     return 0;
 }
+
+void exit() {
+	for(;;);
+}
