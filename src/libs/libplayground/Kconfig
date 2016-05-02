@@ -8,7 +8,7 @@
 # @TAG(NICTA_BSD)
 #
 
-config LIB_DATA_STRUCT
+config LIB_PLAYGROUND
     bool "Build playgroundOS API library"
     depends on LIB_SEL4 && HAVE_LIBC
     default y
