@@ -13,5 +13,6 @@ config APP_INIT
     default y
     depends on LIB_SEL4 && HAVE_LIBC && LIB_PLAYGROUND && LIB_CPIO
     select HAVE_SEL4_APPS
+    select APP_BOOTSTRAP
     help
         Simple init startup process.

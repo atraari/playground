@@ -37,7 +37,7 @@ playground: export PATH := $(STAGE_ROOT)/dite:$(PATH)
 playground: common init kernel_elf app-images
 	@echo "Generating boot image: ${IMAGE_ROOT}/playground-image.iso"
 	cp -f ${IMAGE_ROOT}/kernel-ia32-pc99 img-root/boot/kernel-ia32-pc99
-	cp -f ${IMAGE_ROOT}/init-image-ia32-pc99 ./img-root/sbin/init
+	cp -f ${STAGE_BASE}/bin/init ./img-root/sbin/init
 	./scripts/create_iso -d ./img-root/ -o ${IMAGE_ROOT}/playground-image.iso
 endif
 
