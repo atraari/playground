@@ -2,6 +2,6 @@ timeout 10
 default 0
 
 title playgroundOS (based on seL4)
-	kernel /boot/kernel.elf
+	kernel /boot/kernel-ia32-pc99
 	module /sbin/init
 
