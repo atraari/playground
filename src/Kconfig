@@ -14,13 +14,13 @@
 
 mainmenu "Project Configuration"
 
-config COMMON_PATH
-    string
-    option env="COMMON_PATH"
-
 menu "seL4 Kernel"
 source "kernel/Kconfig"
 endmenu
+
+config COMMON_PATH
+    string
+    option env="COMMON_PATH"
 
 source libs/Kconfig
 source apps/Kconfig
