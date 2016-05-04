@@ -22,7 +22,7 @@ CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
 OFILES := archive.o
 
 # Libraries required to build the target
-LIBS := sel4 c cpio playgroundsys playground utils sel4utils sel4allocman sel4simple elf sel4platsupport platsupport sel4vspace sel4vka sel4vspace
+LIBS := sel4 c cpio playgroundsys playground utils sel4utils sel4allocman sel4simple elf sel4platsupport platsupport sel4vspace sel4vka sel4vspace sel4debug
 ifdef CONFIG_KERNEL_STABLE
 LIBS += sel4simple-stable
 else
