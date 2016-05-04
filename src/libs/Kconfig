@@ -14,28 +14,43 @@ config SEL4_LIBS_PATH
 
 menu "seL4 Libraries"
 
+# seL4 API library
 source "$SEL4_LIBS_PATH/libsel4/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4debug/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4bench/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4test/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4allocman/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4vspace/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4vka/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4vmm/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4platsupport/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4utils/Kconfig"
-source "$SEL4_LIBS_PATH/libplatsupport/Kconfig"
-source "$SEL4_LIBS_PATH/libutils/Kconfig"
-source "$SEL4_LIBS_PATH/libethdrivers/Kconfig"
-source "$SEL4_LIBS_PATH/libpci/Kconfig"
+
+# core C and syscalls libraries
 source "$SEL4_LIBS_PATH/libmuslc/Kconfig"
 source "$SEL4_LIBS_PATH/libsel4muslcsys/Kconfig"
 source "$SEL4_LIBS_PATH/libplaygroundsys/Kconfig"
+source "$SEL4_LIBS_PATH/libplayground/Kconfig"
+
+# simple resource abstraction
 source "$SEL4_LIBS_PATH/libsel4simple/Kconfig"
 source "$SEL4_LIBS_PATH/libsel4simple-default/Kconfig"
 source "$SEL4_LIBS_PATH/libsel4simple-stable/Kconfig"
-source "$SEL4_LIBS_PATH/libcpio/Kconfig"
+
+# resource management
+source "$SEL4_LIBS_PATH/libsel4allocman/Kconfig"
+source "$SEL4_LIBS_PATH/libsel4vspace/Kconfig"
+source "$SEL4_LIBS_PATH/libsel4vka/Kconfig"
+source "$SEL4_LIBS_PATH/libsel4utils/Kconfig"
+source "$SEL4_LIBS_PATH/libutils/Kconfig"
+
+# elf anf filesystem libraries
 source "$SEL4_LIBS_PATH/libelf/Kconfig"
-source "$SEL4_LIBS_PATH/libplayground/Kconfig"
+source "$SEL4_LIBS_PATH/libcpio/Kconfig"
+
+# driver related libraries
+source "$SEL4_LIBS_PATH/libsel4platsupport/Kconfig"
+source "$SEL4_LIBS_PATH/libplatsupport/Kconfig"
+source "$SEL4_LIBS_PATH/libethdrivers/Kconfig"
+source "$SEL4_LIBS_PATH/libpci/Kconfig"
+
+# virtual machine management libraries
+source "$SEL4_LIBS_PATH/libsel4vmm/Kconfig"
+
+# debuging, benchmarking and testing libraries
+source "$SEL4_LIBS_PATH/libsel4debug/Kconfig"
+source "$SEL4_LIBS_PATH/libsel4bench/Kconfig"
+source "$SEL4_LIBS_PATH/libsel4test/Kconfig"
 
 endmenu
