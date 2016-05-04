@@ -182,5 +182,5 @@ int main(void)
     test_assert_fatal(error == 0);
     test_assert_fatal(res == 0);
 
-    return result;
+    return 0;
 }
