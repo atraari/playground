@@ -14,6 +14,8 @@
 #include <playground/stub.h>
 #include <playground/dprintf.h>
 
+#include <sel4/arch/syscalls.h>
+
 #include <autoconf.h>
 
 const char* dprintfServerName = "INIT";
@@ -24,6 +26,7 @@ int main(void)
     /*dprintf("Init started...\n");
     playground_stub();
     dprintf("Init exiting...\n");*/
+    seL4_DebugPutChar("Z");
     for(;;);
     return 0;
 }
