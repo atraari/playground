@@ -26,7 +26,7 @@ source "$SEL4_LIBS_PATH/libplayground/Kconfig"
 # simple resource abstraction
 source "$SEL4_LIBS_PATH/libsel4simple/Kconfig"
 source "$SEL4_LIBS_PATH/libsel4simple-default/Kconfig"
-source "$SEL4_LIBS_PATH/libsel4simple-stable/Kconfig"
+#source "$SEL4_LIBS_PATH/libsel4simple-stable/Kconfig"
 
 # resource management
 source "$SEL4_LIBS_PATH/libsel4allocman/Kconfig"
