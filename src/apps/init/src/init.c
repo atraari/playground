@@ -156,7 +156,7 @@ int main(void)
     seL4_BootInfo *info = seL4_GetBootInfo();
 
 #ifdef SEL4_DEBUG_KERNEL
-    seL4_DebugNameThread(seL4_CapInitThreadTCB, "CapInitThread");
+    seL4_DebugNameThread(seL4_CapInitThreadTCB, "Init");
 #endif
 
     //compile_time_assert(init_data_fits_in_ipc_buffer, sizeof(test_init_data_t) < PAGE_SIZE_4K);
@@ -177,10 +177,10 @@ int main(void)
     /* switch to a bigger, safer stack with a guard page
      * before starting the tests */
     printf("Switching to a safer, bigger stack\n");
-    intptr_t result = (intptr_t)sel4utils_run_on_stack(&env.vspace, main_continued, NULL);
-    if (result != 0) {
-      printf("sel4utiles_run_on_stack: returned non-zero result=%d\n", result);
-    }
+    void *res;
+    int error = sel4utils_run_on_stack(&env.vspace, main_continued, NULL, &res);
+    test_assert_fatal(error == 0);
+    test_assert_fatal(res == 0);
 
     return result;
 }
