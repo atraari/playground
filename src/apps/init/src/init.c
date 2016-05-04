@@ -180,5 +180,5 @@ int main(void)
     void *res;
     int error = sel4utils_run_on_stack(&env.vspace, main_continued, NULL, &res);
 
-    return 0;
+    return error;
 }
