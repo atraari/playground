@@ -21,6 +21,9 @@
 const char* dprintfServerName = "INIT";
 int dprintfServerColour = 33;
 
+/* dummy global for libsel4muslcsys */
+char _cpio_archive[1];
+
 int main(void)
 {   
     /*dprintf("Init started...\n");
