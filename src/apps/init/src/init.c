@@ -26,9 +26,9 @@ char _cpio_archive[1];
 
 int main(void)
 {   
-    /*dprintf("Init started...\n");
+    dprintf("Init started...\n");
     playground_stub();
-    dprintf("Init exiting...\n");*/
+    dprintf("Init exiting...\n");
     seL4_DebugPutChar('Z');
     for(;;);
     return 0;
