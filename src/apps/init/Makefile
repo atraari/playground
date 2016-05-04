@@ -22,6 +22,6 @@ endif
 NK_CFLAGS += -std=gnu99 -O2
 
 # Libraries required to build the target
-LIBS := sel4 c playground playgroundsys cpio sel4vspace sel4utils
+LIBS := sel4 c cpio sel4playgroundsys playground utils sel4utils sel4allocman sel4simple sel4test elf sel4platsupport platsupport sel4vspace
 
 include $(SEL4_COMMON)/common.mk
