@@ -179,8 +179,6 @@ int main(void)
     printf("Switching to a safer, bigger stack\n");
     void *res;
     int error = sel4utils_run_on_stack(&env.vspace, main_continued, NULL, &res);
-    test_assert_fatal(error == 0);
-    test_assert_fatal(res == 0);
 
     return 0;
 }
