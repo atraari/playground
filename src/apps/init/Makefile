@@ -18,11 +18,6 @@ ENTRY_POINT := _sel4_start
 # Source files required to build the target
 CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
 
-# Add crt file only if LIBC is not present, otherwise use crt files from LIBC
-ifneq (${CONFIG_HAVE_LIBC},y)
-ASMFILES := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/crt/arch-${ARCH}/crt0.S))
-endif
-
 # Libraries required to build the target
 LIBS := sel4 c cpio playgroundsys playground utils sel4utils sel4allocman sel4simple elf sel4platsupport platsupport sel4vspace sel4vka sel4vspace
 LIBS += sel4simple-default
