@@ -15,10 +15,6 @@ TARGETS := $(notdir $(SOURCE_DIR)).bin
 # started in a standard way
 ENTRY_POINT := _sel4_start
 
-# Make sure this symbol stays around as we don't reference this, but
-# whoever loads us will
-LDFLAGS += -u __vsyscall_ptr
-
 # Source files required to build the target
 CFILES   := $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/*.c))
 
@@ -27,7 +23,11 @@ OFILES := archive.o
 
 # Libraries required to build the target
 LIBS := sel4 c cpio playgroundsys playground utils sel4utils sel4allocman sel4simple elf sel4platsupport platsupport sel4vspace sel4vka sel4vspace
+ifdef CONFIG_KERNEL_STABLE
+LIBS += sel4simple-stable
+else
 LIBS += sel4simple-default
+endif
 
 # extra cflag for sel4test
 CFLAGS += -Werror -g

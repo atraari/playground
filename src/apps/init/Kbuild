@@ -10,4 +10,13 @@
 
 apps-$(CONFIG_APP_INIT)  	+= init
 
-init: 	common libsel4 libmuslc libsel4vka libcpio libelf libsel4allocman libsel4platsupport libplatsupport libplaygroundsys libplayground libsel4simple libsel4simple-default libsel4vspace libsel4utils libutils libcpio libelf
+init-y = 	common libsel4 libmuslc libsel4vka libcpio libelf libsel4allocman libsel4platsupport libplatsupport libplaygroundsys libplayground libsel4simple libsel4vspace libsel4utils libutils libcpio libelf
+
+# set up correct simple lib for our kernel
+ifdef CONFIG_KERNEL_STABLE
+init-$(CONFIG_LIB_SEL4_SIMPLE_STABLE) += libsel4simple-stable
+else
+init-$(CONFIG_LIB_SEL4_SIMPLE_DEFAULT) += libsel4simple-default
+endif
+
+init: kernel_elf $(init-y)
